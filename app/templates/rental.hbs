@@ -1,7 +1,13 @@
 <h2>More information about {{model.owner}}'s {{model.type}}:</h2>
+{{#link-to 'index'}}[ RETURN ]{{/link-to}}
+<br>
+<br>
 
 {{update-rental rental=model update="update"}}
 
 {{rental-detail rental=model destroyRental="destroyRental" destroyReview="destroyReview"}}
 
+
 {{new-review saveReview="saveReview" rental=model}}
+<div class="footer-review">
+</div>

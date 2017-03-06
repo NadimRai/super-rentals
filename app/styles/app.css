@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 .navbar{
 	font-size: 16px;
+}
+
+.navbar-right{
+	margin-right: 10px;
 }
 .navbar-brand{
 	font-family: 'Lobster', cursive;
@@ -10,7 +16,98 @@
 .brand-text{
 	color: #ff5a5f;
 }
+.brand-desc{
+	width:100%;
+	height: 200px;
+	
+
+}
+.brand-txt{
+	color: #FF5A5F;
+	font-weight: 700;
+	font-family: 'Lobster', cursive;
+	font-size: 4em;
+}
+
+.brand-subtxt{
+	font-size: 40px;
+	line-height: 1.43;
+	letter-spacing: 1px;
+	margin-left: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
 
 .fa-star{
 	color: #ffd700;
+}
+ul{
+	list-style: none;
+}
+
+img{
+	width:800px;
+	height: 400px;
+	padding:5px;
+	
+}
+
+figure{
+	margin-top: 20px;
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+
+.index-pic{
+	width:387px;
+	height:387px;
+}
+/******* Main listing Index *****************/
+.main-listing{
+	margin-top: 80px;
+}
+.desc-txt{
+	font-size: 1.6em;	
+}
+
+.blog-sidebar h2{
+	text-align: center;
+	color:#f63;
+	padding-top: 10px;
+}
+
+.review-listing{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+.new-rental{
+	float:right;
+	margin-top:20px;
+}
+/******* Rental-detail-individual **************/
+.property-desc{
+	font-family: 'Oswald', sans-serif;
+	font-size: 28px;	
+}
+.delete-rental{
+	float:right;
+}
+/******** Review styling ***************/
+.review-desc{
+	margin-top:60px;
+
+}
+.panel-default-review{
+	width: 70%;
+	margin:0 auto;
+	margin-bottom: 10px;
+}
+
+/******* Footer ***********/
+.footer-review{
+	margin-top:50px;
+	width: 100%;
+	height: 20px;
+	
 }

@@ -1,24 +1,43 @@
-<h1> Welcome to Super Rentals </h1>
+<div class="brand-desc">
+	<span class="brand-txt">Super Rentals</span> 
+	<span class="brand-subtxt">Book unique homes and experience <br>a city like a local.</span>
+</div>
 
-We hope you find exactly what you're looking for in a place to stay.
+<div class="row">
+  <div class="col-md-4"><img class="index-pic" src="assets/images/hk.jpeg"></div>
+  <div class="col-md-4"><img class="index-pic" src="assets/images/europe.jpeg"></div>
+  <div class="col-md-4"><img class="index-pic" src="assets/images/pagoda.jpeg"></div>
+</div>
 
-<h2> Available Rentals </h2>
+<div class="row">
+	<div class="col-md-8">
+		<div class="main-listing">
+			<ul>
+			  {{#each model.rentals as |rental|}}
+			  	<div class="panel panel-default">
+			  		<div class="panel-body">
+			    		 {{rental-popularity rental}} {{rental-tile rental=rental}} 
+			     	</div>
+				</div>
+			  {{/each}}
+			 </ul>
+		</div>
+		<div class="new-rental">
+			{{new-rental saveRental2="saveRental3"}}
+		</div>
+	</div>
 
-<ul>
-  {{#each model.rentals as |rental|}}
-	{{rental-popularity rental}} {{rental-tile rental=rental}}
-  {{/each}}
-</ul>
-
-{{new-rental saveRental2="saveRental3"}}
-
-<h2> All Reviews </h2>
-
-<ul>
-  {{#each model.reviews as |review|}}
-    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
-  {{/each}}
-</ul>
+	<div class="col-md-4 blog-sidebar  ">
+		<div class="sidebar-module sidebar-module-inset">
+			<h2> All Reviews </h2>
+			<ul>
+			  {{#each model.reviews as |review|}}
+			    <li class="review-listing">{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+			  {{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
 
 
 

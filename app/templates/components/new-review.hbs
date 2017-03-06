@@ -14,9 +14,9 @@
         <label for="content">Content</label>
         {{input value=content id="content"}}
       </div>
-      <button {{action 'saveReview'}}>Save</button>
+      <button class="btn btn-primary" {{action 'saveReview'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'reviewFormShow'}}>New Review</button>
+  <button class="btn btn-primary" {{action 'reviewFormShow'}}>New Review</button>
 {{/if}}

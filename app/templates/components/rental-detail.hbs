@@ -1,15 +1,23 @@
-Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is
-available by arrangement through {{rental.owner}}.
+
 <br>
-<p><img src={{rental.image}} alt={{rental.type}}></p>
+<p><figure><img src={{rental.image}} alt={{rental.type}}></figure></p>
+<div class="property-desc">
+	Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is available by arrangement through {{rental.owner}}.
+</div>
+<br>
+<button class="btn btn-danger delete-rental" {{action 'delete' rental}}><i class="fa fa-trash-o" aria-hidden="true"></i>  Delete Rental</button>
 
 
-<h2> Reviews </h2>
-<ul>
-  {{#each rental.reviews as |review|}}
-    {{review-tile review=review destroyReview="destroyReview"}}
-    {{rental-popularity rental}}
-  {{/each}}
-</ul>
+<div class="review-desc">
+<hr>
+	<h2> Reviews </h2>
+	<ul>
+	  {{#each rental.reviews as |review|}}
+	    {{review-tile review=review destroyReview="destroyReview"}}
+	    {{rental-popularity rental}}
+	  {{/each}}
+	</ul>
+</div>
 
-<button {{action 'delete' rental}}>Delete</button>
+
+

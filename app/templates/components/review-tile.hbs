@@ -1,2 +1,18 @@
-<li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
-<button {{action 'delete' review}}>Delete Review</button>
+<li>
+<div class="panel panel-default panel-default-review">
+  	<div class="panel-body">
+  		<div class="row">
+  			<div class="col-md-4">
+				{{review.rating}} - {{review.content}} - by {{review.author}}
+			</div>
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<button class="btn btn-danger" {{action 'delete' review}}>
+				<i class="fa fa-trash-o" aria-hidden="true"></i> Delete Review
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+</li>

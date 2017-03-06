@@ -22,6 +22,7 @@ export default Ember.Route.extend({
       newReview.save().then(function() {
         return rental.save();
       });
+      
       this.transitionTo('rental', rental);
     },
     
