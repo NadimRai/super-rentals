@@ -8,6 +8,7 @@ available by arrangement through {{rental.owner}}.
 <ul>
   {{#each rental.reviews as |review|}}
     {{review-tile review=review destroyReview="destroyReview"}}
+    {{rental-popularity rental}}
   {{/each}}
 </ul>
 
